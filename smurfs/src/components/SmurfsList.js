@@ -25,6 +25,10 @@ const SmurfsList = props => {
   );
 };
 
+// const postSmurf = smurf => {
+//   this.props.postSmurf(smurf);
+// };
+
 const mapStateToProps = state => {
   console.log("state", state);
 

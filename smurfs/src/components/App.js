@@ -5,6 +5,8 @@ import "./App.css";
 import React, { Component } from "react";
 import SmurfsList from "./SmurfsList";
 import SmurfsNewPost from "./SmurfsNewPost";
+// import { postSmurf, fetchSmurfs } from "../actions/SmurfsActions";
+import { getData } from "../actions/SmurfsActions";
 
 // import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
@@ -18,7 +20,11 @@ class App extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <SmurfsNewPost />
+              <SmurfsNewPost
+                smurfs={this.props.smurfs}
+                // postSmurf={this.postSmurf}
+                getData={this.getData}
+              />
             </div>
             <div className="col-md-6">name={this.name}</div>
           </div>
