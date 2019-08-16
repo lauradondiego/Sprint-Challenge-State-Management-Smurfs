@@ -3,8 +3,6 @@ import {
   FETCH_SMURF_DATA_SUCCESS
   // FETCH_WEBCAM_DATA_FAILURE
 } from "../actions";
-// or whatever makes sense for the api you choose
-// see if it is an array or whatever
 const initialState = {
   smurfs: [],
   isLoading: false,
