@@ -11,7 +11,7 @@ const SmurfsList = props => {
   console.log("props", props);
   return (
     <>
-      <h1>Welcome to My Smurf Info App!</h1>
+      <h1>Welcome to My Smurf App!</h1>
       <button onClick={props.getData}>
         {props.isLoading ? (
           <Loader type="tailspin" color="#00BFFF" height="15" width="100" />

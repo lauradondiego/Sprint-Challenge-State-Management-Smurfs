@@ -17,5 +17,7 @@ export const getData = () => {
       .catch(error => {
         dispatch({ type: FETCH_SMURF_DATA_FAILURE, payload: error.response });
       });
+
+    axios.post("http://localhost:3333/smurfs");
   };
 };
