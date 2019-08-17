@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Loader from "react-loader-spinner";
 
-import { getData } from "../actions";
+import { getData } from "../actions/SmurfsActions";
 
 import Smurfs from "./Smurfs";
 
@@ -21,13 +21,10 @@ const SmurfsList = props => {
       </button>
       {props.smurfs &&
         props.smurfs.map(data => <Smurfs key={data.name} smurf={data} />)}
+      {/* <div>{props.postData}</div> */}
     </>
   );
 };
-
-// const postSmurf = smurf => {
-//   this.props.postSmurf(smurf);
-// };
 
 const mapStateToProps = state => {
   console.log("state", state);

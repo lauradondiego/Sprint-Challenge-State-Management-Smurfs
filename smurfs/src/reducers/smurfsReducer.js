@@ -32,7 +32,6 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        // addingSmurf: false,
         smurfs: [],
         error: action.payload
       };
