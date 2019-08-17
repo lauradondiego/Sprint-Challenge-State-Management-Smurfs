@@ -23,10 +23,33 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+
+It simplifies state management and will help us when we have much larger projects with a lot more state to work with
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Actions are objects like {type: "REMOVE_FEATURE"} this is the value on the action type. They specifcy an event that is taking place, like removing a feature or adding a feature
+
+Reducers are functions that take the current or initialState and an action, and returns the next state.
+
+A single state value is managed by the store and represents the entire state of a Redux App
+
+- [ ] What is the difference between Application state and Component state?
+      When would be a good time to use one over the other?
+
+The application state is global, and the component state is local. Redux uses stores to hold app state. That means any component, anywhere in the app can access it if you connect to it.
+
+Component state lives within that specific component. It can only be updated within that component and passed down to its children via props.
+
+If you have a lot of state and components, it would make more sense to use Application state vs. Component state.
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux Thunk allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met.
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+My favorite state management system I've learned this Sprint is Redux. It is easier for me to understand and we have had much more practice with it with more challenging projects, therefore I feel like I really understand it better.
 
 ## Project Set Up
 
